@@ -1,29 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Robo Flappy — Pink & Blue</title>
+  <title>Robo Flappy — SemuBot</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <!-- Loading / Title Overlay -->
-  <div id="overlay" class="show">
+  <!-- Loading / Start screen -->
+  <div id="loading-screen" role="dialog" aria-modal="true" aria-labelledby="game-title">
     <div class="overlay-card">
-      <h1 class="title">ROBO FLAPPY</h1>
+      <h1 id="game-title">Robo Flappy</h1>
+      <p class="tagline">SemuBot flying through robot pipes</p>
 
-      <div class="spinner"></div>
-      <p id="loadingText" class="tagline">Loading…</p>
+      <div class="progress" aria-label="Loading" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <div class="bar" id="progressBar"></div>
+      </div>
 
-      <button id="btnPlay" disabled aria-disabled="true">▶ Play</button>
-      <p class="hint">Click or press Space to flap after starting</p>
+      <button id="playBtn" disabled aria-disabled="true">▶ Play</button>
+      <p class="hint">After Play: click or press Space to flap</p>
     </div>
   </div>
 
-  <!-- Game Canvas -->
+  <!-- Canvas game -->
   <canvas id="game" width="480" height="720"></canvas>
 
+  <noscript>This game needs JavaScript enabled.</noscript>
   <script src="game.js"></script>
 </body>
 </html>
+
