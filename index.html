@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Robo Flappy — Pink & Blue</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Loading / Title Overlay -->
+  <div id="overlay" class="show">
+    <div class="overlay-card">
+      <h1 class="title">ROBO FLAPPY</h1>
+
+      <div class="spinner"></div>
+      <p id="loadingText" class="tagline">Loading…</p>
+
+      <button id="btnPlay" disabled aria-disabled="true">▶ Play</button>
+      <p class="hint">Click or press Space to flap after starting</p>
+    </div>
+  </div>
+
+  <!-- Game Canvas -->
+  <canvas id="game" width="480" height="720"></canvas>
+
+  <script src="game.js"></script>
+</body>
+</html>
